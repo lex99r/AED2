@@ -1,7 +1,6 @@
 // TAD: Lista de inteiros
 
 // Definições de tipos auxiliares para a lista
-
 typedef struct lista Lista;
 typedef void (*Callback)(int);
 
