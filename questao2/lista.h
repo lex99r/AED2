@@ -26,6 +26,9 @@ int inicioLista(Lista* lista);
 // Função que percorre a lista e aplica uma função callback para cada elemento
 void percorrerLista(Lista* lista, Callback callback);
 
+// Função que busca um inteiro 'chave' na lista e retorna sua posição
+int buscaLista(Lista* lista, int chave);
+
 // Função que retorna o último elemento da lista
 int finalLista(Lista* lista);
 

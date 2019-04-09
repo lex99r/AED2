@@ -1,0 +1,1 @@
+gcc busca.c main.c -o main && ./main

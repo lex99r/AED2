@@ -1,4 +1,5 @@
 #include "busca.h"
+#include "../questao2/lista.h"
 
 int buscaSequencial(int* vet, int N, int chave){
 

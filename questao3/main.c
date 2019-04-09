@@ -48,7 +48,6 @@ int main(void){
 	}
 
 	printf("###########################\n\n");
-
 	printf("Tempo médio de execução dos algoritmos de ordenação:\n\n");
 	printf("Quicksort: %.4lf ms\n", tempoQuick/RODADAS);
 	printf("Inserção Direta: %.4lf ms\n", tempoInsertion/RODADAS);

@@ -129,6 +129,30 @@ void percorrerLista(Lista* lista, Callback callback){
 
 }
 
+int buscaLista(Lista* lista, int chave){
+
+	int indice = 0;
+
+	if(!listaVazia(lista)){
+
+		Elemento* aux = lista -> inicio;
+
+		while(aux != NULL){
+
+			if(aux -> num == chave) return indice;
+			aux = aux -> prox;
+			indice++;
+
+		}
+
+		return -1;
+
+	}
+
+	return '\0';
+
+}
+
 int inicioLista(Lista* lista){
 
 	return lista -> inicio -> num;
