@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "ordenacao.h"
+#include "../vetor/vetor.h"
 #define N 100000
 #define MAX 1000000
 #define MIN -1000000

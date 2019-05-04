@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "lista.h"
-#include "../questao1/busca.h"
+#include "../lista/lista.h"
+#include "../vetor/vetor.h"
 #define N 1000000
 #define LIM_MAX 11
 #define NUM_MAX 10000001

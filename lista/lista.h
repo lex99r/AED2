@@ -1,4 +1,4 @@
-// TAD: Lista de inteiros
+// TAD: lista de inteiros
 
 // Definições de tipos auxiliares para a lista
 typedef struct lista Lista;

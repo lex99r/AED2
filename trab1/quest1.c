@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "busca.h"
+#include "../vetor/vetor.h"
 #define N 1000000
 #define LIM_MAX 11
 #define NUM_MAX 10000001
