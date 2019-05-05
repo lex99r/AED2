@@ -14,3 +14,6 @@ int buscaBinaria(int* vet, int N, int chave);
 
 // Busca sequencial, classe: O(N)
 int buscaSequencial(int* vet, int N, int chave);
+
+// Função que exibe os elementos do vetor
+void imprimirVetor(int* vet, int N);

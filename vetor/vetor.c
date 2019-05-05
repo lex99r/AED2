@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "vetor.h"
 
 void quickSort(int* vet, int inicio, int fim){
@@ -98,5 +99,13 @@ int buscaBinaria(int* vet, int N, int chave){
 	}
 
 	return -1;
+
+}
+
+void imprimirVetor(int* vet, int N){
+
+	for(int i = 0; i < N; i++) printf("%d ", vet[i]);
+
+	printf("\n");
 
 }
