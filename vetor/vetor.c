@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "vetor.h"
 
 void quickSort(int* vet, int inicio, int fim){
@@ -99,6 +100,34 @@ int buscaBinaria(int* vet, int N, int chave){
 	}
 
 	return -1;
+
+}
+
+void shuffle(int* vet, int N){
+
+	for(int i = N - 1; i > 0; i--){
+
+		int j = rand() % (i + 1);
+
+		int aux = vet[j];
+		vet[j] = vet[i];
+		vet[i] = aux;
+
+	}
+
+}
+
+void preencherVetorAleatoriamente(int* vet, int N){
+
+	int* vetAux = (int*) malloc(N * 2 * sizeof(int));
+
+	for(int i = 0; i < (N * 2); i++) vetAux[i] = i;
+
+	shuffle(vetAux, N * 2);
+
+	for(int i = 0; i < N; i++) vet[i] = vetAux[i];
+
+	free(vetAux);
 
 }
 

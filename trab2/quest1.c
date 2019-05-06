@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "../arvore/arvore.h"
+#include "../arvore/abp.h"
 #define N 50
 #define MAX 1001
 

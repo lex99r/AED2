@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "../vetor/vetor.h"
-#include "../arvore/arvore.h"
+#include "../arvore/abp.h"
 #define N 1000000
 #define MAX 5000000
 #define CLOCKS_PER_MSEC 1000.0

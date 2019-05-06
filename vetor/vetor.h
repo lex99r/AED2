@@ -15,5 +15,8 @@ int buscaBinaria(int* vet, int N, int chave);
 // Busca sequencial, classe: O(N)
 int buscaSequencial(int* vet, int N, int chave);
 
+void shuffle(int* vet, int N);
+void preencherVetorAleatoriamente(int* vet, int N);
+
 // Função que exibe os elementos do vetor
 void imprimirVetor(int* vet, int N);
