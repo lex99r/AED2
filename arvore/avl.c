@@ -179,6 +179,18 @@ void atualizarBal(NodoAVL* nodoAVL, int num){
     }
 }
 
+void liberarAVL(NodoAVL* raiz){
+
+    if(raiz != NULL){
+
+        liberarAVL(raiz -> esq);
+        liberarAVL(raiz -> dir);
+		free(raiz);
+
+    }
+
+}
+
 // Verificar balancemaneto para remoção
 // void balanceamentoRemocao(NodoAVL * nodoAVL){
 //     NodoAVL * filho;
@@ -280,6 +292,16 @@ void percorreOrdem (NodoAVL *A){
         printf(" %d ", A->num);
         percorreOrdem(A->dir);
     }
+}
+
+
+NodoAVL* buscaAVL(NodoAVL* raiz, int chave){
+
+	if(raiz == NULL) return NULL;
+	else if (raiz -> num > chave) return buscaAVL(raiz -> esq, chave);
+	else if (raiz -> num < chave) return buscaAVL(raiz -> dir, chave);
+	else return raiz;
+
 }
 
 // // PreOrdem

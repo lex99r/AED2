@@ -6,3 +6,4 @@ void impressaoPrefixado(No* no);
 void impressaoCentral(No* no);
 void impressaoPosfixado(No* no);
 No* buscaABP(No* arvore, int chave);
+void liberarABP(No* raiz);

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "vetor.h"
 
 void quickSort(int* vet, int inicio, int fim){
@@ -119,11 +120,11 @@ void shuffle(int* vet, int N){
 
 void preencherVetorAleatoriamente(int* vet, int N){
 
-	int* vetAux = (int*) malloc(N * 2 * sizeof(int));
+	int* vetAux = (int*) malloc(N * 10 * sizeof(int));
 
-	for(int i = 0; i < (N * 2); i++) vetAux[i] = i;
+	for(int i = 0; i < (N * 10); i++) vetAux[i] = i;
 
-	shuffle(vetAux, N * 2);
+	shuffle(vetAux, N * 10);
 
 	for(int i = 0; i < N; i++) vet[i] = vetAux[i];
 

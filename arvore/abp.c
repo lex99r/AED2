@@ -22,7 +22,7 @@ No* criarNo(No* esq, No* dir, int info){
 
 No* criarArvore(void){
 
-    return NULL;
+    return criarNo(NULL, NULL, -1000);
 
 }
 
@@ -80,11 +80,24 @@ void impressaoPosfixado(No* no){
 
 }
 
-No* buscaArvore(No* arvore, int chave){
+
+void liberarABP(No* raiz){
+
+    if(raiz != NULL){
+
+        liberarABP(raiz -> esq);
+		free(raiz);
+        liberarABP(raiz -> dir);
+
+    }
+
+}
+
+No* buscaABP(No* arvore, int chave){
 
 	if(arvore == NULL) return NULL;
-	else if (arvore -> info > chave) return buscaArvore(arvore -> esq, chave);
-	else if (arvore -> info < chave) return buscaArvore(arvore -> dir, chave);
+	else if (arvore -> info > chave) return buscaABP(arvore -> esq, chave);
+	else if (arvore -> info < chave) return buscaABP(arvore -> dir, chave);
 	else return arvore;
 
 }
