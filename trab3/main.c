@@ -16,7 +16,7 @@ int main(void){
 
 	Nodo* indiceMat = criarArvore();
 	Nodo* indiceCoef = criarArvore();
-	Hash* hash = criaHash(N + 27);
+	Hash* hash = criaHash(N + N * 0.1 + 27);
 	FILE* file = fopen("file.bin", "wb+");
 
 	Aluno aluno;
@@ -42,13 +42,11 @@ int main(void){
 
 		int mat = rmat(MAX_MAT);
 
-		Nodo* nodo; Indice* indice;
-
 		printf("==== Rodada %d ====\n\n", i + 1);
 		printf("Matrícula: %d\n\n", mat);
 
 		inicio = clock();
-		nodo = buscaABP(indiceMat, mat, comparaChave);
+		Nodo* nodo = buscaABP(indiceMat, mat, comparaChave);
 
 		printf("Aluno: ");
 
@@ -68,11 +66,11 @@ int main(void){
 		// -----------------------------------------------------
 
 		inicio = clock();
-		indice = buscaHash(hash, mat, comparaChave);
+		Indice* indice = buscaHash(hash, mat, comparaChave);
 
 		printf("Aluno: ");
 
-		if(nodo != NULL){
+		if(indice != NULL){
 
 			fseek(file, (indice -> linha) * sizeof(Aluno), SEEK_SET);
 			fread(&aluno, sizeof(Aluno), 1, file);
@@ -115,7 +113,7 @@ int main(void){
 	printf("ABP: %lf ms\n", acmMat/RODADAS);
 	printf("Tabela hash: %lf ms\n", acmHash/RODADAS);
 	printf("Arquivo: %lf ms\n", acmArq/RODADAS);
-
+	
 	return 0;
 
 }
